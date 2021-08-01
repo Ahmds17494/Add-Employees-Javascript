@@ -35,18 +35,12 @@ class Employee {
 // TotalExpensses Fucntion
 
 const TotalExpensses= ()=>{
-    let sum
+    let sum;
     // calculate the sum of all salaries using reduce method
     if (DataList.length) {
-        //  salary : 800 
-        //  salary : 1000
-        //  salary : 200 
-        //  salary : 300 
-// p salary : 1800
-// c salary : 200
-// 
+
          sum = DataList.reduce((p,c)=>{
-                return   {salary: Number(p.salary) + Number(c.salary)} // 800
+                return   {salary: Number(p.salary) + Number(c.salary)} 
         })
     }
 
@@ -57,18 +51,6 @@ const TotalExpensses= ()=>{
 
 // inset Element TO DOm function
 const insertElment = (data)=>{
-
-    // console.log(" Hello" + DataList[DataList.length-1].id);
-
-    
-
-   
-    
-
-        // bring the element
-       
-        
-        
 
         let html ='\
          <tr>\
@@ -81,28 +63,15 @@ const insertElment = (data)=>{
         <td><a class="btn" onclick="deleteEmployee(this.id)" id= '+ (DataList.length -1) +' ><i class="fas fa-trash-alt text-danger"></i></a> </td>\
         </tr>\
         '
-      
-
-        
-
 
       tableBody.insertAdjacentHTML('beforeend',html)
 
 
-        
-
 }
 
-// Create the Table again after deleting
+            // Create the Table again after deleting
 
-const ReinsertElement = (data)=>{
-
-    
-
-    
-
-   
-    
+        const ReinsertElement = (data)=>{
 
         // bring the element
         
@@ -138,9 +107,6 @@ const ReinsertElement = (data)=>{
 
 // add newEmployee function
 const AddNewEmployee =()=>{
-    
- 
-    
     let newEmployee ;
     let ID = DataList.length ; 
 
